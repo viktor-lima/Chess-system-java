@@ -43,7 +43,6 @@ public class ChessMatch {
 	}
 	
 	//this method shows what are the possible positions of the piece
-	//(este método é para ver as possibilidades de movimentar uma deteminada peça)
 	public boolean[][] possibleMoves(ChessPosition sourcePosition){
 		Position position = sourcePosition.toPosition();
 		validateSourcePosition(position);
@@ -51,7 +50,6 @@ public class ChessMatch {
 	}
 	
 	//method for moving a chess piece
-	//(método para efetuar a movimentação de uma peça do xadrez);
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
@@ -64,7 +62,7 @@ public class ChessMatch {
 		return (ChessPiece) capturedPiece;
 	}
 	
-	//mehtod of make piece move (método de fazer mover a peça);
+	//method of make piece move
 	private Piece makeMove (Position source, Position target) {
 		Piece p = board.removePiece(source);
 		Piece capturedPiece = board.removePiece(target);
@@ -72,8 +70,7 @@ public class ChessMatch {
 		return  capturedPiece;
 	}
 	
-	//method os validate source position for chess
-	//(método de validar a posição da fonte do xadrez)
+	//method of validate source position for chess
 	public void validateSourcePosition(Position position) {
 		if (!board.thereIsAPiece(position)) {
 			throw new ChessException("there is no piece on source position");
@@ -98,7 +95,7 @@ public class ChessMatch {
 		
 	}
 	
-	//method of place new piece in chess board (método de colocar nova peça no tabuleiro)
+	//method of place new piece in chess board
 	
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
 		board.placePiece(piece, new ChessPosition(column, row).toPosition());

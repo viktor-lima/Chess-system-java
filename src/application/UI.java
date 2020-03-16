@@ -49,6 +49,7 @@ public class UI {
 
 	}
 	
+	
 	public static void printMach(ChessMatch chessMatch) {
 		printBoard(chessMatch.getPieces());
 		System.out.println();
@@ -56,6 +57,7 @@ public class UI {
 		System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
 	}
 
+	//printing chess board
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i++) {
 			System.out.print((8 - i) + " ");
@@ -66,6 +68,7 @@ public class UI {
 		}
 		System.out.print("  a b c d e f g h ");
 	}
+	//printing chess board with possibles moves
 	public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
 		for (int i = 0; i < pieces.length; i++) {
 			System.out.print((8 - i) + " ");
@@ -77,6 +80,7 @@ public class UI {
 		System.out.print("  a b c d e f g h ");
 	}
 
+	//Printing piece of chess board
 	private static void printPiece(ChessPiece piece, boolean background) {
 		if (background) {
 			System.out.print(ANSI_BLUE_BACKGROUND);
