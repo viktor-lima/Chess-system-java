@@ -21,7 +21,7 @@ public class Program {
 		
 		
 		
-		while(true) {
+		while(!chessMatch.getCheckMate()) {
 		try {
 			UI.clearScreen();
 		
@@ -57,6 +57,8 @@ public class Program {
 			}
 		
 		}
+		UI.clearScreen();
+		UI.printMach(chessMatch, captured);
 			
 		
 	}
