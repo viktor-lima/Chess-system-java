@@ -22,7 +22,7 @@ public class Program {
 		
 		
 		while(true) {
-			try {
+		try {
 			UI.clearScreen();
 		
 			UI.printMach(chessMatch, captured);
@@ -30,11 +30,13 @@ public class Program {
 			System.out.print("source: ");
 			ChessPosition source = UI.readChessPosition(sc);
 			System.out.println();
+			
 			//print possibles moves positions 
 			boolean[][] possibleMoves = chessMatch.possibleMoves(source);
 			UI.clearScreen();
 			UI.printBoard(chessMatch.getPieces(), possibleMoves);
 		
+			System.out.println();
 			System.out.println();
 			System.out.print("target: ");
 			ChessPosition target = UI.readChessPosition(sc);
@@ -53,7 +55,9 @@ public class Program {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
-			
+		
 		}
+			
+		
 	}
 }
